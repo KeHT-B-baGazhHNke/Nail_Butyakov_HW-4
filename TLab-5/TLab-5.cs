@@ -38,7 +38,7 @@ namespace Nail_Butyakov_HW_4
                 }
                 return true;
             }
-            catch (System.OverflowException e)
+            catch (System.OverflowException)
             {
                 Console.WriteLine("Произошло переполнение...");
                 return false;
@@ -97,7 +97,7 @@ namespace Nail_Butyakov_HW_4
         static void Main(string[] args)
         {
             {
-                Console.Write("Упражнение 5.1 вывод наибольшее=го из двух чисел\nВведите первое число: ");
+                Console.Write("Упражнение 5.1 вывод наибольшего из двух чисел\nВведите первое число: ");
                 int a = Convert.ToInt32(Console.ReadLine());
                 Console.Write("Введите второе число: ");
                 int b = Convert.ToInt32(Console.ReadLine());
