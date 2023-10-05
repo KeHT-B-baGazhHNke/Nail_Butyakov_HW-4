@@ -18,7 +18,7 @@ namespace HW_4
             public vorchlvl vorch;
             public int sinyak;
             public string[] vorchwords;
-            public int babka(string name, vorchlvl vorch, int sinyak, string[] vorchwords, params string[] cursedwords)
+            public int babka(params string[] cursedwords)
             {
                 sinyak = 0;
                 foreach (string word in vorchwords)
@@ -93,16 +93,16 @@ namespace HW_4
         static void Main(string[] args)
         {
             {
-                Console.WriteLine("Задача 1 смена мест элементов массива");
+                Console.WriteLine("Задача 1 смена мест двух чисел в массиве");
                 int[] array = new int[20];
                 Random rand = new Random();
                 for (int i = 0; i < array.Length; i++)
                     array[i] = rand.Next(10);
                 Console.WriteLine($"Массив из 20 случайных чисел: {string.Join(" ", array)}");
-                Console.Write("Введите первое число из данного массива: ");
+                Console.Write("Введите одно из чисел данного массива: ");
                 int target = Convert.ToInt32(Console.ReadLine());
                 int a = Array.IndexOf(array, target);
-                Console.Write("Введите второе число из данного массива: ");
+                Console.Write("Введите еще одно из чисел данного массива: ");
                 target = Convert.ToInt32(Console.ReadLine());
                 int b = Array.IndexOf(array, target);
                 if (a != -1 && b != -1)
@@ -122,7 +122,7 @@ namespace HW_4
                 int multi = 1;
                 double mid;
                 Console.WriteLine($"Сумма элементов массива: {arrop(ref multi, out mid, 1, 2, 3, 4, 5, 6, 7, 8, 9)}" +
-                    $"\nПроизведение элементов массива: {multi}\nCреднее арифметическое в массиве: {mid}\n");
+                    $"\nПроизведение элементов массива: {multi}\nCреднее арифметическое в массиве: {mid}");
                 Console.WriteLine("\nНажмите любую клавишу для продолжения...");
                 Console.ReadKey();
             }
@@ -145,7 +145,51 @@ namespace HW_4
                 Console.ReadKey();
             }
             {
+                Console.WriteLine("\nЗадача 4 Деды");
+                string[] cursedwords = { "MotherF@#ker", "K@nt", "D$ck", "F@ck", "B#$tch", "F@#cking", "S@#ker", "Assh@le", "C@ckS@#ker" };
 
+                ded Vagif = new ded();
+                Vagif.name = "Vagif";
+                Vagif.vorch = vorchlvl.Норм;
+                string[] vagifvorchwords = { "Ekarniy babay", "Suka", "Mat' tvoyu" };
+                Vagif.vorchwords = vagifvorchwords;
+                Vagif.babka(cursedwords);
+
+                ded Ruben = new ded();
+                Ruben.name = "Ruben";
+                Ruben.vorch = vorchlvl.Ворчит_немножко;
+                string[] rubenvorchwords = { "MotherF@#ker", "K@nt", "Shegli", "Supostaty" };
+                Ruben.vorchwords = rubenvorchwords;
+                Ruben.babka(cursedwords);
+
+                ded Semenych = new ded();
+                Semenych.name = "Semenych";
+                Semenych.vorch = vorchlvl.Хлебом_не_корми_дай_поворчать;
+                string[] semenychvorchwords = { "M@nda", "S@#ker", "Assh@le", "C@ckS@#ker", "D$ck", "F@ck", "B#$tch" };
+                Semenych.vorchwords = semenychvorchwords;
+                Semenych.babka(cursedwords);
+
+                ded Evlampiy = new ded();
+                Evlampiy.name = "Evlampiy";
+                Evlampiy.vorch = vorchlvl.Норм;
+                string[] evlampiyvorchwords = { "Elki palki", "Etizhy pasatizhy", "Edrit' Kolotit'", "Egipetskaya sila" };
+                Evlampiy.vorchwords = evlampiyvorchwords;
+                Evlampiy.babka(cursedwords);
+
+                ded Bombom = new ded();
+                Bombom.name = "Bombom";
+                Bombom.vorch = vorchlvl.Ворчит_немножко;
+                string[] bombomvorchwords = { "B#$tch", "F@#cking", "S@#ker", "Net nu ti indeec ya baldyu", "ne urchy", "Nu ty frantsuz" };
+                Bombom.vorchwords = bombomvorchwords;
+                Bombom.babka(cursedwords);
+
+                Console.WriteLine($"Количество фингалов у {Vagif.name}а: {Vagif.sinyak}");
+                Console.WriteLine($"Количество фингалов у {Ruben.name}а: {Ruben.sinyak}");
+                Console.WriteLine($"Количество фингалов у {Semenych.name}а: {Semenych.sinyak}");
+                Console.WriteLine($"Количество фингалов у {Evlampiy.name}а: {Evlampiy.sinyak}");
+                Console.WriteLine($"Количество фингалов у {Bombom.name}а: {Bombom.sinyak}");
+                Console.WriteLine("\nНажмите любую клавишу для продолжения...");
+                Console.ReadKey();
             }
         }
     }
