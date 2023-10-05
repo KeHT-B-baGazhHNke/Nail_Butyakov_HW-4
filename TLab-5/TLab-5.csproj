@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ACE1D632-B6F4-4DB4-BABC-2895E851EF73}</ProjectGuid>
+    <ProjectGuid>{A868507B-42C3-42B4-836F-44D0275AF536}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Nail_Butyakov_HW_4</RootNamespace>
-    <AssemblyName>Nail_Butyakov_HW-4</AssemblyName>
+    <RootNamespace>TLab_5</RootNamespace>
+    <AssemblyName>TLab-5</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tlab-5.cs" />
+    <Compile Include="TLab-5.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

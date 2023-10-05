@@ -15,7 +15,7 @@ namespace Nail_Butyakov_HW_4
             int a = Convert.ToInt32(Console.ReadLine());
             Console.Write("Введите второе число: ");
             int b = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"Наибольшее из двух чисел: { mxnm(a, b)}");
+            Console.WriteLine($"Наибольшее из двух чисел: {mxnm(a, b)}");
             Console.WriteLine("\nНажмите любую клавишу для продолжения...");
             Console.ReadKey();
         }
